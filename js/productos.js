@@ -52,20 +52,18 @@ const guitarras = [{
 
 // Función para agregar un nuevo producto
 function agregarProducto(nuevoProducto) {
-    // Validar el nuevo producto
+
     if (!nuevoProducto.id || !nuevoProducto.nombre || !nuevoProducto.cuerdas || !nuevoProducto.categoria || !nuevoProducto.precio || !nuevoProducto.stock) {
         console.error("Todos los campos son obligatorios.");
         return;
     }
     
-    // Comprobar si el producto ya existe
     const productoExiste = guitarras.some(producto => producto.id === nuevoProducto.id);
     if (productoExiste) {
         console.error("El producto con este ID ya existe.");
         return;
     }
     
-    // Agregar el producto al array
     guitarras.push(nuevoProducto);
     console.log("Producto agregado:", nuevoProducto);
 }
