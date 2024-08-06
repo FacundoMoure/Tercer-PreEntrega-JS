@@ -106,3 +106,4 @@ console.log("Stock actualizado:", guitarras);
 }
 
 actualizarStockAleatorio();
+

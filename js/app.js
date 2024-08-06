@@ -11,8 +11,8 @@ document.addEventListener('keyup', e => {
     }
 })
 
-// Obtén el contenedor de tarjetas
-const contenedorTarjetas = document.getElementById("productos-container");
+
+
 
 
 /** Crea las tarjetas de productos teniendo en cuenta la lista en productos.js */
@@ -42,17 +42,16 @@ crearTarjetasProductosInicio(guitarras);
 // productos.js
 
 
-// Función para obtener el carrito del localStorage
+const contenedorTarjetas = document.getElementById("productos-container");
+
 function obtenerCarrito() {
     return JSON.parse(localStorage.getItem('carrito')) || [];
 }
 
-// Función para guardar el carrito en el localStorage
 function guardarCarrito(carrito) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-// Función para crear las tarjetas de productos
 function crearTarjetasProductosInicio(productos) {
     productos.forEach(producto => {
         const nuevaGuitarra = document.createElement("div");
@@ -76,11 +75,11 @@ function crearTarjetasProductosInicio(productos) {
     });
 }
 
-// Función para agregar un producto al carrito
+
 function agregarAlCarrito(producto) {
     const carrito = obtenerCarrito();
 
-    // Verificar si el producto ya está en el carrito
+
     const productoEnCarrito = carrito.find(item => item.id === producto.id);
 
     if (productoEnCarrito) {
@@ -91,15 +90,13 @@ function agregarAlCarrito(producto) {
         carrito.push({ ...producto, cantidad: 1 });
     }
 
-    // Guardar el carrito actualizado en el localStorage
+
     guardarCarrito(carrito);
 
-    // Confirmar que se ha agregado el producto
     console.log("Agregaste este producto al carrito", producto);
 }
 
-// Asegúrate de que esta función se llama con el array de productos adecuado
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Aquí deberías cargar los productos desde algún lugar
     crearTarjetasProductosInicio(guitarras);
 });
