@@ -25,10 +25,6 @@
     <nav class="navbar navbar-expand-sm navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html"><img src="img/guitar_navbar.png" alt="logo">ML Luthier</a>
-            <div class="navbar-cart">
-                <a href="./cart.html"><img src="./img/shopping-cart.png" alt="carrito"><span id="cuenta-carrito"> 0
-                    </span></a>
-            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -48,6 +44,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cart.html">
+                            <img src="./img/shopping-cart.png" alt="carrito">
+                            <span id="cuenta-carrito">0</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -65,6 +67,7 @@
                 <button id="vaciar-carrito">Vaciar Carrito</button> <!-- Botón para vaciar el carrito -->
             </div>
         </header>
+        <div id="carrito-container"></div>
     </main>
     <!-- main fin -->
 

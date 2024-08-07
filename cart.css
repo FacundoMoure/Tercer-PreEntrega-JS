@@ -55,6 +55,7 @@ button:hover {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    height: 100vh;
 }
 
 .producto-carrito {
@@ -84,3 +85,4 @@ button:hover {
 .producto-carrito .precio {
     font-weight: bold;
 }
+

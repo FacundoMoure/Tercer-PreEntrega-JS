@@ -62,3 +62,17 @@
 }
 
 
+#buscador {
+    width: 90%;
+    flex: auto;
+    display: inline;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    margin: 10px;
+    box-sizing: border-box;
+
+
+}

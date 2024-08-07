@@ -107,3 +107,103 @@ console.log("Stock actualizado:", guitarras);
 
 actualizarStockAleatorio();
 
+
+
+
+
+
+
+function actualizarContadorCarrito() {
+    const carrito = obtenerCarrito();
+    const contadorCarrito = document.getElementById('cuenta-carrito');
+    const cantidadTotal = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+    contadorCarrito.textContent = cantidadTotal;
+}
+
+function agregarAlCarrito(producto) {
+    const carrito = obtenerCarrito();
+
+    const productoEnCarrito = carrito.find(item => item.id === producto.id);
+
+    if (productoEnCarrito) {
+        productoEnCarrito.cantidad += 1;
+    } else {
+        carrito.push({ ...producto, cantidad: 1 });
+    }
+
+    guardarCarrito(carrito);
+    actualizarContadorCarrito(); // Actualiza el contador del carrito
+
+    console.log("Agregaste este producto al carrito", producto);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    crearTarjetasProductosInicio(guitarras);
+    actualizarContadorCarrito(); // Asegúrate de que el contador esté actualizado al cargar la página
+});
+
+
+const contenedorTarjetas = document.getElementById("productos-container");
+
+function obtenerCarrito() {
+    return JSON.parse(localStorage.getItem('carrito')) || [];
+}
+
+function guardarCarrito(carrito) {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function crearTarjetasProductosInicio(productos) {
+    productos.forEach(producto => {
+        const nuevaGuitarra = document.createElement("div");
+        nuevaGuitarra.classList = "tarjeta-producto";
+        nuevaGuitarra.innerHTML = `
+        <img src="./img/productos/${producto.id}.jpg" alt="Producto ${producto.id}">
+        <h3>${producto.nombre}</h3>
+        <p>Cuerdas: ${producto.cuerdas}</p>
+        <p>Categoria: ${producto.categoria}</p>
+        <p>ID: ${producto.id}</p>
+        <p>Stock: ${producto.stock}</p>
+        <p class="precio">$${producto.precio}</p>
+        <button data-id="${producto.id}">Agregar al carrito</button>`;
+
+        contenedorTarjetas.appendChild(nuevaGuitarra);
+
+        // Agregar el evento click al botón
+        nuevaGuitarra.getElementsByTagName("button")[0].addEventListener("click", () => {
+            agregarAlCarrito(producto);
+        });
+    });
+}
+
+function agregarAlCarrito(producto) {
+    const carrito = obtenerCarrito();
+
+    const productoEnCarrito = carrito.find(item => item.id === producto.id);
+
+    if (productoEnCarrito) {
+        productoEnCarrito.cantidad += 1;
+    } else {
+        carrito.push({ ...producto, cantidad: 1 });
+    }
+
+    guardarCarrito(carrito);
+    actualizarContadorCarrito(); // Actualiza el contador del carrito
+
+    console.log("Agregaste este producto al carrito", producto);
+}
+
+function actualizarContadorCarrito() {
+    const carrito = obtenerCarrito();
+    const contadorCarrito = document.getElementById('cuenta-carrito');
+    const cantidadTotal = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+    contadorCarrito.textContent = cantidadTotal;
+}
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     crearTarjetasProductosInicio(guitarras);
+//     actualizarContadorCarrito(); // Asegúrate de que el contador esté actualizado al cargar la página
+// });
+
+

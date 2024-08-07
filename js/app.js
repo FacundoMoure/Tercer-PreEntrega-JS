@@ -83,10 +83,8 @@ function agregarAlCarrito(producto) {
     const productoEnCarrito = carrito.find(item => item.id === producto.id);
 
     if (productoEnCarrito) {
-        // Si el producto ya está en el carrito, solo incrementa la cantidad
         productoEnCarrito.cantidad += 1;
     } else {
-        // Si el producto no está en el carrito, agrégalo con cantidad 1
         carrito.push({ ...producto, cantidad: 1 });
     }
 

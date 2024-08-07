@@ -18,6 +18,20 @@ html {
     scroll-behavior: smooth;
 }
 
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos de la lista a la derecha */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Asegura que el carrito esté pegado a los elementos de la lista */
+.navbar-nav .nav-item {
+    margin-left: 1rem; /* Ajusta el margen entre los elementos */
+}
 .navbar {
     height: 85px;
     box-shadow: 0 0 7px black !important;
