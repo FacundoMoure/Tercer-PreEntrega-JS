@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error cargando el archivo JSON:', error));
 });
 
-
 // Función para agregar un nuevo producto
 function agregarProducto(nuevoProducto) {
     if (!nuevoProducto.id || !nuevoProducto.nombre || !nuevoProducto.cuerdas || !nuevoProducto.categoria || !nuevoProducto.precio || !nuevoProducto.stock) {
@@ -90,7 +89,6 @@ function actualizarStockAleatorio() {
     console.log("Stock actualizado:", guitarras);
 }
 
-
 // Función para agregar un producto al carrito
 function agregarAlCarrito(producto) {
     const carrito = obtenerCarrito();
@@ -106,7 +104,6 @@ function agregarAlCarrito(producto) {
     actualizarContadorCarrito(); 
     console.log("Agregaste este producto al carrito", producto);
 }
-
 
 function crearTarjetasProductosInicio(productos) {
     const contenedorTarjetas = document.getElementById("productos-container");

@@ -3,7 +3,6 @@ function obtenerCarrito() {
     return JSON.parse(localStorage.getItem('carrito')) || [];
 }
 
-// Guardar el carrito en el localStorage
 function guardarCarrito(carrito) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
