@@ -18,7 +18,7 @@
     <!-- inicia aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- fin aos -->
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -37,13 +37,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Servicios</a>
+                        <a class="nav-link" href="#productos">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#galeria">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="./cart.html">Carrito</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./cart.html">
@@ -55,10 +52,9 @@
             </div>
         </div>
     </nav>
-
     <!-- navbar fin -->
-    <!-- main inicia -->
 
+    <!-- main inicia -->
     <main class="p-5 main">
         <div class="call">
             <h1>ML Luthier</h1>
@@ -67,104 +63,33 @@
             <input type="search" placeholder="Buscar productos..." class="card-filter form mb-4" id="buscador" name="buscador">
         </div>
     </main>
-    <h2>Productos</h2>
-
+    <h2 id="productos">Productos</h2>
 		<section id="productos-container">
 		</section>
-
     <!-- main fin -->
 
-
-
-    <!-- <h2 id="servicios">Servicios</h2>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="nleft col-sm-6"></div>
-            <div data-aos="fade-left" class="nright col-sm-6">
-                <h3>Calibración</h3>
-                <p>La calibración de guitarra o calibración de bajo consiste en una serie de ajustes que se realizan en el instrumento, bien sea en el mástil, puente, y otras partes mecánicas del instrumento, con el fin
-                de compensar correctamente la tensión ejercida por las cuerdas, facilitando el uso del instrumento
-                al corregir la altura o acción, evitando cualquier inconveniente como los trasteos.</p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid1">
-        <div class="row1">
-            <div data-aos="fade-up" class="nleft1 col-sm-6">
-                <h3>Instrumentos</h3>
-                <p>En ML Luthier, nos especializamos en ofrecer servicios profesionales de creación, reparación y
-                    calibración para instrumentos musicales. Sabemos que la precisión y el rendimiento óptimo de tu
-                    instrumento son fundamentales para
-                    tu experiencia musical, por lo que nos dedicamos a asegurar que cada instrumento esté afinado y
-                    ajustado con la máxima precisión.</p>
-            </div>
-            <div class="nright1 col-sm-6">
-            </div>
-        </div>
-    </div> -->
-
-    <!-- galería inicia -->
-    <!-- <h2 id="galeria">Galería</h2> -->
-    <!-- galería fin -->
-
-
-    <!-- carousel inicia-->
-<!-- 
-    <section>
-
-        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./img/ML01.JPG" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./img/ML1.JPG" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./img/ML3.JPG" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button> -->
-
-    <!-- carousel fin -->
     <!-- footer inicia -->
     <footer>
         <p>2024 © Hangar 18 Media</p>
     </footer>
     <!-- footer fin -->
+
     <a href="#" class="subir">
         <i class="fa-solid fa-angle-up"></i>
     </a>
-
-
-
-
     <!-- Inicia BS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <!-- Fin BS -->
-
     <!-- inicia aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
     <!-- fin aos -->
-
-
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/productos.js"></script>
-    <script src="./js/carrito.js"></script>
     <script src="./js/app.js"></script>
 </body>
 

@@ -20,18 +20,15 @@ html {
 
 .navbar-collapse {
     display: flex;
-    justify-content: flex-end; /* Alinea los elementos de la lista a la derecha */
+    justify-content: flex-end; 
 }
 
 .navbar-nav {
     display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
+    align-items: center; 
 }
 
-/* Asegura que el carrito esté pegado a los elementos de la lista */
-.navbar-nav .nav-item {
-    margin-left: 1rem; /* Ajusta el margen entre los elementos */
-}
+
 .navbar {
     height: 85px;
     box-shadow: 0 0 7px black !important;
@@ -68,6 +65,19 @@ html {
 }
 
 
+.navbar {
+    display: flex;
+    align-items: center; 
+}
+
+.navbar-toggler {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+
 #cuenta-carrito {
     background-color: rgb(100, 2, 2);
     border-radius: 100%;
@@ -78,17 +88,12 @@ html {
     text-align: center;
 }
 
-
 .filtro {
     /* display: none; */
     visibility: hidden;
     opacity: 0;
     order: 1;
 }
-
-
-
-
 
 .btn {
     background-color: whitesmoke;
@@ -152,48 +157,12 @@ section {
     height: 700px;
 }
 
-.nleft {
-    height: 300px;
-    background-image: url(./img/articulo-calibracion-9.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.container-fluid1 h3,
-p {
-    margin: 5px;
-    padding: 5px;
-}
-
-.row1 {
-    display: flex;
-}
-
-.nright1 {
-    height: 400px;
-    background-image: url(./img/780x434px.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
 h2 {
     text-align: center;
     background-color: black;
     color: whitesmoke;
     padding: 10px;
     margin-bottom: 0;
-}
-
-
-#carouselExampleControls {
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-}
-
-#carouselExampleControls .carousel-item img {
-    width: 70%;
-    height: auto;
 }
 
 footer {
@@ -226,8 +195,14 @@ footer {
     }
 }
 
-@media only screen and (max-width: 574px) {
-    .row1 {
-        flex-flow: column-reverse;
+@media (max-width: 767.98px) {
+    .navbar-cart {
+        display: none; 
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-toggler {
+        margin-bottom: 30px; 
     }
 }
